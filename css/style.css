@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    grid-area: he;
+    background-color: brown;
+}
+
+
+
+nav {
+    grid-area: na;
+    background-color: bisque;
+}
+
+
+
+#section_1 {
+    grid-area: s1;
+    background-color: cyan;
+}
+
+
+
+#section_2 {
+    grid-area: s2;
+    background-color: darkgreen;
+}
+
+
+
+
+footer {
+    grid-area: fo;
+    background-color: deeppink;
+
+}
+
+
+#grid_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 100px 500px 250px 150px;
+    grid-template-areas: 
+    "he na"
+    "s1 s1"
+    "s2 s2"
+    "fo fo";
+}
