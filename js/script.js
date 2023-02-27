@@ -1,6 +1,6 @@
-function toggleMeny() {
-    document.getElementById('links').classList.toggle('nav-active')
-    document.getElementById('burger').classList.toggle('crossed_line')
+function toggleMenu() {
+    document.getElementById('burger').classList.toggle('burger_toggle')
+    document.getElementById('nav_links').classList.toggle('nav_active')
 }
 
-document.getElementById('burger').addEventListener('click', toggleMeny)
+document.getElementById('burger').addEventListener('click', toggleMenu)
