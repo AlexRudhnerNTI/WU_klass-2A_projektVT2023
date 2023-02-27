@@ -4,28 +4,47 @@
     box-sizing: border-box;
 }
 
+
+h1 {
+
+}
+
+#section_1_quote {
+
+}
+
+
+
 header {
+    display: flex;
     grid-area: he;
     background-color: blue;
     height: 100px;
-    width: minmax(200, 1fr);
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
     background-color: cornflowerblue;
     grid-area: na;
     height: 100px;
-    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 
 }
 
 #section_1 {
     grid-area: s1;
-    background-color: blueviolet;
-    height: 400px;
+    background-color: rgb(226, 43, 43);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #section_2 {
@@ -48,6 +67,7 @@ footer {
         "s1 s1"
         "s2 s2"
         "fo fo";
+    grid-template-columns: minmax(100px, 1fr) 100px;
 }
 
 #links {
@@ -62,7 +82,11 @@ footer {
     top: 100px;
     right: -250px;
     width: 250px;
+    transition: all 0.8s;
+}
 
+.nav-active {
+    transform: translateX(-250px);
 }
 
 #links li{
@@ -86,18 +110,65 @@ footer {
     background-color: blue;
 }
 
+#burger {
+    cursor: pointer;
+}
+
 #burger div {
-    width: 25px;
-    height: 3px;
+    width: 50px;
+    height: 5px;
     background-color: black;
     border-radius: 10px;
     margin: 5px;
+    transition: all 0.4s;
 }
 
 #line_1 {
-    transform: rotate(45deg) translate();
+    transform: rotate(0deg) translate(1px, 6px);
 }
 
 #line_2 {
-    transform: rotate(-45deg) translate();
+    transform: rotate(-90deg) translate(2px, 0px);;
+}
+
+.crossed_line #line_1 {
+    transform: rotate(405deg) translate(3px, 4px);
+}
+
+.crossed_line #line_2 {
+    transform: rotate(-405deg) translate(3px, -4px);
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #burger {
+        display: none;
+    }
+
+    #grid_wrapper {
+        display: grid;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s1"
+            "s2 s2"
+            "fo fo";
+    }
+
+    #links {
+        flex-direction: row;
+        height: 72px;
+        right: 250px;
+        width: 100%;
+        transition: none;
+        position: relative;
+
+    }
+
+
+    .nav_active {
+        transform: translate(0px);
+        
+    }
 }
