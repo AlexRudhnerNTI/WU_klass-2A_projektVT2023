@@ -24,9 +24,16 @@ nav {
 
 #section_1 {
     grid-area: s1;
-    background-color: brown;
-    background-image: url(../img/main_background.jpg);
+    background-image: url(../img/brick_wall_background.jpg);
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    border: solid rgb(224, 224, 224);
+    border-top-width: 2px;
+    border-right-width: 1px;
+    border-bottom-width: 0px;
+    border-left-width: 1px;
+
 }
 
 #section_2 {
@@ -62,7 +69,49 @@ footer {
         "fo fo";
 }
 
-article {
+h1 {
+    color: rgb(224, 224, 224);
+    font-size: 45px;
+}
+
+#daily_artist {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 700px;
+    align-items: center;
+}
+
+#daily_artist_picture {
+    background-image: url(../img/daily_artist.jpg);
+    height: 300px;
+    width: 354px;
+    border: solid rgb(224, 224, 224);
+    border-width: 1px;
+}
+
+h2 {
+    color: rgb(224, 224, 224);
+    font-size: 23px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: rgb(224, 224, 224);
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+#ed_smith_info {
+    color: rgb(224, 224, 224);
+    font-size: 15px;  
+    padding-left: 70px; 
+    padding-right: 70px;   
+}
+
+.footer_article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,13 +124,13 @@ article {
     width: 100%;
 }
 
-h3 {
+h4 {
     font-size: 20px;
     padding-top: 10px;
     color: rgb(224, 224, 224);
 }
 
-article p {
+footer article p {
     font-size: 15px;
     padding: 15px;
     color: rgb(224, 224, 224);
@@ -207,7 +256,7 @@ article p {
         flex-direction: row;
     }
 
-    article {
+    .footer_article {
         height: 150px;
         border-top-width: 2px;
         border-right-width: 1px;
