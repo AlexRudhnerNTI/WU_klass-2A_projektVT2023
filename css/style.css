@@ -7,11 +7,14 @@
 header {
     grid-area: he;
     background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav {
     grid-area: na;
-    background-color: aquamarine;
+    background-color: blueviolet;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -30,9 +33,11 @@ nav {
     justify-content: center;
     border: solid rgb(224, 224, 224);
     border-top-width: 2px;
-    border-right-width: 1px;
+    border-right-width: 2px;
     border-bottom-width: 0px;
-    border-left-width: 1px;
+    border-left-width: 2px;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -60,13 +65,14 @@ footer {
 
 #grid_wrapper {
     display: grid;
-    grid-template-columns: minmax(300, 1fr) 100px;
+    grid-template-columns: minmax(300px, 1fr) 100px;
     grid-template-rows: 100px 500px 300px 360px;
     grid-template-areas: 
         "he na"
         "s1 s1"
         "s2 s2"
         "fo fo";
+    overflow-x: hidden;
 }
 
 h1 {
@@ -74,7 +80,7 @@ h1 {
     font-size: 45px;
 }
 
-#daily_artist {
+#ed_smith_article {
     display: flex;
     flex-direction: column;
     height: 500px;
@@ -82,8 +88,8 @@ h1 {
     align-items: center;
 }
 
-#daily_artist_picture {
-    background-image: url(../img/daily_artist.jpg);
+#ed_smith_picture {
+    background-image: url(../img/ed_smith.jpg);
     height: 300px;
     width: 354px;
     border: solid rgb(224, 224, 224);
@@ -162,7 +168,7 @@ footer article p {
     flex-direction: column;
     height: 500px;
     width: 250px;
-    background-color: darkcyan;
+    background-color: rgb(0, 0, 0);
     justify-content: space-around;
     align-items: center;
     position: absolute;
@@ -177,8 +183,8 @@ footer article p {
 
 #nav_links a {
     text-decoration: none;
-    font-size: 25px;
-    color: black;
+    font-size: 24px;
+    color: rgb(224, 224, 224);
     display: flex;
     width: 250px;
     justify-content: center;
@@ -186,7 +192,7 @@ footer article p {
 }
 
 #nav_links a:hover {
-    background-color: blue;
+    background-color: rgb(91, 36, 102);
 }
 
 #burger {
@@ -243,8 +249,9 @@ footer article p {
         display: flex;
         flex-direction: row;
         height: 78px;
-        width: 100%;
-        right: 600px;
+        width: 100vw;
+        right: 0px;
+
         
     }
 
@@ -282,5 +289,9 @@ footer article p {
         border-left-width: 1px;
     }
 
-
+    #section_1 {
+        border-right-width: 1px;
+        border-left-width: 1px;
+    
+    }
 }
