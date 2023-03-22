@@ -2,11 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body {
+    overflow-x: hidden;
 }
 
 header {
     grid-area: he;
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +19,7 @@ header {
 
 nav {
     grid-area: na;
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     position: absolute;
     top: 0px;
     right: 0px;
@@ -25,10 +30,10 @@ nav {
     height: 100px;
 }
 
-#section_1 {
+#section_1_hem {
     grid-area: s1;
     background-image: url(../img/brick_wall_background.jpg);
-    background-size: cover;
+    background-size: 100%;
     display: flex;
     justify-content: center;
     border: solid rgb(224, 224, 224);
@@ -38,7 +43,6 @@ nav {
     border-left-width: 2px;
     flex-direction: column;
     align-items: center;
-
 }
 
 #section_2 {
@@ -63,29 +67,42 @@ footer {
     flex-direction: column;
 }
 
-#grid_wrapper {
+#grid_wrapper_hem {
     display: grid;
     grid-template-columns: minmax(300px, 1fr) 100px;
-    grid-template-rows: 100px 500px 300px 360px;
+    grid-template-rows: 100px 550px 300px 360px;
     grid-template-areas: 
         "he na"
         "s1 s1"
         "s2 s2"
         "fo fo";
-    overflow-x: hidden;
 }
 
 h1 {
     color: rgb(224, 224, 224);
     font-size: 45px;
+    font-family: 'Tiro Devanagari Hindi', serif;
+
 }
 
-#ed_smith_article {
+#daily_artist_article {
     display: flex;
     flex-direction: column;
     height: 500px;
-    width: 700px;
+    width: 500px;
+    align-items: center; 
+}
+
+.artist_article {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: svw;
     align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: solid rgb(224, 224, 224);
+    border-left: 0;
+    border-right: 0;
 }
 
 #ed_smith_picture {
@@ -100,7 +117,7 @@ h2 {
     color: rgb(224, 224, 224);
     font-size: 23px;
     padding-top: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
 }
 
 h3 {
@@ -110,11 +127,23 @@ h3 {
     padding-bottom: 5px;
 }
 
-#ed_smith_info {
+#daily_artist_info {
     color: rgb(224, 224, 224);
     font-size: 15px;  
-    padding-left: 70px; 
-    padding-right: 70px;   
+    padding: 10px;
+    border: solid rgb(224, 224, 224);
+    border-width: 1px;
+    border-radius: 8px; 
+    background: rgba(0, 0, 0, 0.8);
+    margin: 15px;
+}
+
+.artist_info {
+    color: rgb(224, 224, 224);
+    font-size: 15px;  
+    padding: 10px;
+    border-width: 1px;
+    border-radius: 8px; 
 }
 
 .footer_article {
@@ -136,6 +165,9 @@ h4 {
     color: rgb(224, 224, 224);
 }
 
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 footer article p {
     font-size: 15px;
     padding: 15px;
@@ -154,14 +186,7 @@ footer article p {
     color: rgb(224, 224, 224); 
 }
 
-#burger div {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 5px;
-    border-radius: 10%;
-    transition: all 0.4s;
-}
+
 
 #nav_links {
     display: flex;
@@ -202,9 +227,10 @@ footer article p {
 #burger div {
     width: 50px;
     height: 5px;
-    background-color: black;
+    background-color: rgb(224, 224, 224);
     border-radius: 10px;
     margin: 5px;
+    transition: all 0.4s;
 }
 
 #line_1 {
@@ -227,6 +253,49 @@ footer article p {
     transform: translateX(-250px);
 }
 
+#grid_wrapper_artister {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 100px;
+    grid-template-rows: 100px 1800px 360px;
+    grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "fo fo";
+}
+
+#section_1_artister {
+    grid-area: s1;
+    background-image: url(../img/brick_wall_background.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: solid rgb(224, 224, 224);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 0px;
+    border-left-width: 2px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist_lista {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    border: solid rgb(224, 224, 224);
+    border-width: 1px;
+    height: 200px;
+    width: 236px;
+}
+
+.artist_half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 @media screen and (min-width: 800px) {
     
@@ -234,9 +303,9 @@ footer article p {
         display: none;
     }
 
-    #grid_wrapper {
+    #grid_wrapper_hem {
         grid-template-columns: 1fr, 1fr;
-        grid-template-rows: 100px 78px 500px 300px 150px;
+        grid-template-rows: 100px 78px 550px 300px 150px;
         grid-template-areas: 
         "he he"
         "na na"
@@ -272,6 +341,7 @@ footer article p {
         width: 33.333333333333333%;
     }
 
+
     #section_2_rubrik {
         font-size: 28px;
         padding-top: 35px;
@@ -289,9 +359,48 @@ footer article p {
         border-left-width: 1px;
     }
 
-    #section_1 {
+    #section_1_hem {
         border-right-width: 1px;
         border-left-width: 1px;
-    
+
+    }
+
+    #grid_wrapper_artister {
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: 100px 78px 1700px 150px;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s1"
+            "fo fo";
+    }
+
+    #section_1_artister {
+
+
+    }
+
+    .artist_lista {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .artist_article {
+        flex-direction: column;
+        height: 450px;
+        width: 40%;
+        align-items: center;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .artist_info {
+        padding: 10px;
+    }
+
+    .artist_half {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
