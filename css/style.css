@@ -36,11 +36,6 @@ nav {
     background-size: 100%;
     display: flex;
     justify-content: center;
-    border: solid rgb(224, 224, 224);
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 0px;
-    border-left-width: 2px;
     flex-direction: column;
     align-items: center;
 }
@@ -52,12 +47,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid rgb(224, 224, 224);
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 1px;
-    border-left-width: 2px;
-    
 }
 
 footer {
@@ -97,7 +86,6 @@ h1 {
     display: flex;
     flex-direction: row;
     height: 300px;
-    width: svw;
     align-items: center;
     background: rgba(0, 0, 0, 0.3);
     border: solid rgb(224, 224, 224);
@@ -105,12 +93,11 @@ h1 {
     border-right: 0;
 }
 
-#ed_smith_picture {
-    background-image: url(../img/ed_smith.jpg);
+#daily_artist_image {
     height: 300px;
     width: 354px;
-    border: solid rgb(224, 224, 224);
-    border-width: 1px;
+    /* border: solid rgb(224, 224, 224);
+    border-width: 1px; */
 }
 
 h2 {
@@ -152,14 +139,14 @@ h3 {
     align-items: center;
     border: solid rgb(224, 224, 224);
     border-top-width: 1px;
-    border-right-width: 2px;
+    border-right-width: 1px;
     border-bottom-width: 1px;
-    border-left-width: 2px;
+    border-left-width: 1px;
     height: 120px;
     width: 100%;
 }
 
-h4 {
+h5 {
     font-size: 20px;
     padding-top: 10px;
     color: rgb(224, 224, 224);
@@ -217,7 +204,7 @@ footer article p {
 }
 
 #nav_links a:hover {
-    background-color: rgb(91, 36, 102);
+    background-color: rgb(157, 51, 176);
 }
 
 #burger {
@@ -269,11 +256,6 @@ footer article p {
     background-size: 100%;
     display: flex;
     justify-content: space-evenly;
-    border: solid rgb(224, 224, 224);
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 0px;
-    border-left-width: 2px;
     flex-direction: column;
     align-items: center;
 }
@@ -297,6 +279,145 @@ img {
     flex-direction: column;
 }
 
+#grid_wrapper_hitta_hit {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 100px;
+    grid-template-rows: 100px 1100px 360px;
+    grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "fo fo";
+}
+
+
+#section_1_hitta_hit {
+    grid-area: s1;
+    background-image: url(../img/brick_wall_background.jpg);
+    background-size: 100%;
+    display: flex; 
+    flex-direction: column;
+}
+
+#map_picture {
+    width: 400px;
+    height: 230px;
+    border: 1px;
+    border: solid rgb(224, 224, 224);
+}
+
+#map_picture:hover {
+    box-shadow: 1px 0px 8px 8px rgb(91, 36, 102);
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+#map_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#map_article h2 {
+    font-size: 30px;
+    padding: 50px;
+}
+
+#hitta_hit_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.hitta_hit_info_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.hitta_hit_info_article p {
+    color: rgb(224, 224, 224);
+    font-size: 18px;
+    border: solid rgb(224, 224, 224);
+    border-width: 1px;
+    border-radius: 8px; 
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+}
+
+#grid_wrapper_erbjudanden {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 100px;
+    grid-template-rows: 100px 2000px 360px;
+    grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "fo fo";
+}
+
+#section_1_erbjudanden {
+    grid-area: s1;
+    background-image: url(../img/brick_wall_background.jpg);
+    background-size: 100%;
+    display: flex; 
+    flex-direction: column;   
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+#section_1_erbjudanden h2 {
+    font-size: 37px;
+}
+
+#burger_erbjudande {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+#shake_erbjudande {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.erbjudande_img {
+    width: 300px;
+    height: 500px;
+}
+
+.erbjudande_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.erbjudande_info h3 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.erbjudande_info_text {
+    color: rgb(224, 224, 224);
+    font-size: 18px;
+    border: solid rgb(224, 224, 224);
+    border-width: 1px;
+    border-radius: 8px; 
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin: 10px;
+}
+
+
+
+
+
 @media screen and (min-width: 800px) {
     
     #burger {
@@ -304,7 +425,6 @@ img {
     }
 
     #grid_wrapper_hem {
-        grid-template-columns: 1fr, 1fr;
         grid-template-rows: 100px 78px 550px 300px 150px;
         grid-template-areas: 
         "he he"
@@ -335,9 +455,7 @@ img {
     .footer_article {
         height: 150px;
         border-top-width: 2px;
-        border-right-width: 1px;
         border-bottom-width: 2px;
-        border-left-width: 1px;
         width: 33.333333333333333%;
     }
 
@@ -354,30 +472,13 @@ img {
         padding-right: 130px; 
     }
 
-    #section_2 {
-        border-right-width: 1px;
-        border-left-width: 1px;
-    }
-
-    #section_1_hem {
-        border-right-width: 1px;
-        border-left-width: 1px;
-
-    }
-
     #grid_wrapper_artister {
-        grid-template-columns: 1fr, 1fr;
         grid-template-rows: 100px 78px 1700px 150px;
         grid-template-areas: 
             "he he"
             "na na"
             "s1 s1"
             "fo fo";
-    }
-
-    #section_1_artister {
-
-
     }
 
     .artist_lista {
@@ -403,4 +504,50 @@ img {
         margin-left: 50px;
         margin-right: 50px;
     }
+
+    #grid_wrapper_hitta_hit {
+        grid-template-rows: 100px 78px 1000px 150px;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s1"
+            "fo fo";
+    }
+
+    #hitta_hit_info {
+        flex-direction: row;
+    }
+    #map_picture {
+        width: 650px;
+        height: 400px;
+    }
+
+    .hitta_hit_info_article {
+        padding: 100px;
+    }
+
+    #grid_wrapper_erbjudanden {
+        grid-template-rows: 100px 78px 1200px 150px;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s1"
+            "fo fo";
+    }
+
+    #burger_erbjudande {
+        flex-direction: row;
+    }
+
+    #shake_erbjudande {
+        flex-direction: row;
+    }
+
+    .erbjudande_info_text {
+        font-size: 20px;
+        margin: 0px;
+    }
+    
+ 
+
 }

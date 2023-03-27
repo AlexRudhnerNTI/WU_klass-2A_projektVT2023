@@ -4,3 +4,5 @@ function toggleMenu() {
 }
 
 document.getElementById('burger').addEventListener('click', toggleMenu)
+
+
