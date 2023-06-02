@@ -353,8 +353,30 @@ img {
     flex-direction: column;
 }
 
+.artist_halv_article {
+    display: flex;
+    flex-direction: row;
+}
+
 .artist_half h3{
     color: rgb(157, 51, 176);
+}
+
+.tid_pris {
+    color: rgb(224, 224, 224);
+    font-size: 15px;
+    margin: 10px;
+    width: 80px;
+    height: 60px;
+    background-color: rgb(157, 51, 176);
+    border: solid rgb(224, 224, 224);
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    border-radius: 50%;
 }
 
 #grid_wrapper_hitta_hit {
@@ -575,7 +597,7 @@ img {
     justify-content: center;
     align-items: center;
     display: flex;
-    
+    padding: 8px;
 }
 
 
@@ -672,7 +694,9 @@ img {
     }
 
     .artist_info {
-        padding: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 15px;
         
     }
 
@@ -799,5 +823,13 @@ img {
 
     footer article p {
         font-size: 15px;
+    }
+
+    .artist_halv_article {
+        display: flex;
+        flex-direction: row;
+        width: 450px;
+        justify-content: space-between;
+        position: absolute;
     }
 }
